@@ -7,6 +7,7 @@ const express = require("express"); /* Accessing express module */
 const app = express(); /* app is a request handler function */
 const bodyParser = require("body-parser"); /* To handle post parameters */
 const axios = require("axios");
+const portNumber = process.env.PORT || 3000
 
 require("dotenv").config({ path: path.resolve(__dirname, 'credentialsDontPost/.env') })  
 const userName = process.env.MONGO_DB_USERNAME;
@@ -27,12 +28,6 @@ async function main() {
         app.use(bodyParser.urlencoded({extended:false}));
         app.use(express.static(path.join(__dirname, 'files')));
         //app.use(express.static(style.css));
-
-        if (process.argv.length != 3) {
-            process.stdout.write("Usage summerCampServer.js portNumber\n");
-            process.exit(1);
-        }
-        let portNumber = process.argv[2]
 
         const prompt = "Stop to shutdown the server: ";
         let fs = require("fs");
