@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="/style.css" type="text/css" />
+	<title>Refined Palatte</title>
+</head>
+
+<body>
+	<div>
+	<h1>Refined Palatte Weekly</h1>
+	<!--Get Random Drink with pictures-->
+	<%- myDrink %>
+    <%- randDrink %>
+	<!--Get Top Choices with pictures-->
+	<h2>Top (Actual) Choices</h2>
+    <%- drinkStats %>
+	<!--Input/Output for MongoDB-->
+	<h3><a href="/submittedReviews">Get a Glimpse of High Society</a></h3>
+	<!--Link to articles about other drinks, maybe links to classic websites(smirnoff, titos, don julio)-->
+	<div>
+        <h3>Submit Your Own List:</h3>
+        <form action="http://localhost:<%- port %>/submittedReviews" method="post">
+            <fieldset>
+                <label><strong>Username: </strong><input type="text" name="name"/></label>
+                <label><strong>Favorite Liquor: </strong><input type="text" name="favLiq"></label><br><br>
+                <label><strong>Favorite Cocktail: </strong><input type="text" name="favCocktail"></label><br><br>
+                <label><strong>Cocktail Comments:</strong><br><textarea rows="5" cols="80" name="cocktailComments"></textarea></label>
+                <br>
+                <input type="reset" />
+                <input type="submit" value="Submit and See Others!"/>
+            </fieldset>
+            
+        </form>
+	</div>
+	</div>
+</body>
+
+</html>

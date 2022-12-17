@@ -1,0 +1,32 @@
+/* Do not remove this rule */
+html {
+    background-image: url(beach2.jpeg);
+	background-repeat: no-repeat; /* Try repeat-x, no-repeat, repeat */
+	background-attachment: scroll; /* Try scroll, fixed */
+	background-position: center fixed; /* Try top */
+    background-size: 120%;
+
+    font-size: 16px;
+    font-family: serif;
+    background-color: white;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+    font-family: cursive;
+    padding: 0px;
+}
+
+p {
+    font-family: serif;
+    font-weight: normal;
+    padding: 0%;
+    color: navy;
+    margin-bottom: 20px;
+}
+
+#sideimage  {
+    float: left;    
+     margin: 0 15px 0 0;
+    }
