@@ -4,8 +4,8 @@
   "description": "",
   "main": "PersonalPage.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 0",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "start": "echo \"Starting?\" && node RefinedPalatte.js 5001",
+    "test": "echo \"Starting?\" && node RefinedPalatte.js 5001"
   },
   "author": "",
   "license": "ISC",
